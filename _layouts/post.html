@@ -9,9 +9,9 @@ layout: default
         <a href="/"><div class="dot"></div></a>
     </h1>
     <h1 class="title" itemprop="name headline"><a href="">{{ page.title }}</a></h1>
-    <div class="meta mb3">
+    <div class="meta">
         <span class="h1">
-            <a href="https://github.com/{{site.github_username}}">{% if page.author %}{{page.author}}{% else %}{{site.title}}{% endif %}</a>
+            <a href="/">{% if page.author %}{{page.author}}{% else %}{{site.title}}{% endif %}</a>
         </span>
         <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
             {{ page.date | date: "%-d %b %Y" }}
