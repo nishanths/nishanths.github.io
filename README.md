@@ -1,6 +1,6 @@
 # nishanths.github.io [![wercker status](https://app.wercker.com/status/fba89a110952058b1ed018f98722af1e/s/source "wercker status")](https://app.wercker.com/project/bykey/fba89a110952058b1ed018f98722af1e)
 
-The responsive Jekyll theme that powers [this website](https://nishanths.github.io).
+Responsive Jekyll theme.
 
 **Branches**
 
@@ -10,9 +10,10 @@ The responsive Jekyll theme that powers [this website](https://nishanths.github.
 ## Features
 
 - Syntax highlighting
-- Responsive with flexbox
-- [Subtlte animations](#effects)
+- Responsive (with flexbox)
+- [Subtle animations](#effects)
 - Built-in 404 page
+- Google Analytics
 - [Automatic deploys](#build-and-deploy)
 
 <img src="http://cl.ly/0U142h3i003v/Screen%20Shot%202016-03-13%20at%2012.51.27%20PM.png" width=1200>
@@ -22,14 +23,14 @@ The responsive Jekyll theme that powers [this website](https://nishanths.github.
 To view the website locally:
 
 ```bash
-# clone the repo into a directory named `website`
+# clone the repo into a directory named website
 $ git clone https://github.com/nishanths/nishanths.github.io.git website
 $ cd website
 
 # install gems
 $ bundle
 
-# Edit `_config.yml` and other files as needed ...
+# Edit _config.yml and other files as needed ...
 
 # serve locally
 $ bundle exec jekyll serve
@@ -62,16 +63,18 @@ A green dot that links to the home page pulses when the page is loaded and hover
 To generate static files in the `_site` directory, run:
 
 ```
-$ jekyll build
+$ bundle exec jekyll build
 ```
 
-**Automated deploy**
+**Automatic deploy**
 
-The `wercker.yml` files contains a job that builds and force pushes the static files to the `master` branch on GitHub. I usually keep the source on a separate `source` branch and let wercker take care of pushing to `master`.
+The `wercker.yml` file contains a job that builds and force pushes the static files to the `master` branch on GitHub. I usually keep the source on a separate `source` branch and let wercker take care of pushing to `master`.
 
 
 ## License
 
-The web fonts are subject to their original licenses. You are welcome to use the other content under the MIT License.
+The web fonts are subject to their original licenses.
 
-[MIT](http://nishanths.mit-license.org). Copyright © 2016 [Nishanth Shanmugham](https://github.com/nishanths).
+You are welcome to use the other content under the MIT License (where applicable).
+
+[The MIT License](http://nishanths.mit-license.org). Copyright © 2016 [Nishanth Shanmugham](https://github.com/nishanths).

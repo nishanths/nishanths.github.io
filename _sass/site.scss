@@ -1,4 +1,4 @@
-$font-family-sans: "ProximaNova", sans-serif;
+$font-family-sans: "ProximaNova", "Lato", sans-serif;
 $font-family-mono: "Menlo", "Bitstream Vera Sans Mono", monospace;
 $font-family-tt: "Inconsolata", monospace;
 $color-link: rgba(68, 187, 255, 1); // vimeo ::selection with alpha=1
@@ -20,9 +20,11 @@ html {
 body {
   font-family: $font-family-sans;
   color: $color-text;
+  font-weight: 400;
   line-height: 1.725;
   background-color: #fff;
   margin: 0;
+  text-rendering: geometricPrecision;
 }
 
 emph {
