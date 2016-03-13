@@ -2,7 +2,12 @@
 
 The responsive Jekyll theme that powers [this website](https://nishanths.github.io).
 
-**Features**
+**Branches**
+
+- [`source`](https://github.com/nishanths/nishanths.github.io/tree/source): Jekyll source
+- [`master`](https://github.com/nishanths/nishanths.github.io/tree/master): generated static files for GitHub Pages
+
+## Features
 
 - Syntax highlighting
 - Responsive with flexbox
@@ -12,20 +17,9 @@ The responsive Jekyll theme that powers [this website](https://nishanths.github.
 
 <img src="http://cl.ly/0U142h3i003v/Screen%20Shot%202016-03-13%20at%2012.51.27%20PM.png" width=1200>
 
-**Branches**
-
-- [`source`](https://github.com/nishanths/nishanths.github.io/tree/source): Jekyll source
-- [`master`](https://github.com/nishanths/nishanths.github.io/tree/master): generated static files for GitHub Pages
-
-## Contents
-
-* [Setup](#setup)
-* [Usage](#usage)
-* [Effects](#effects)
-* [Build and deploy](#build-and-deploy)
-* [License](#license)
-
 ## Setup
+
+To view the website locally:
 
 ```bash
 # clone the repo into a directory named `website`
