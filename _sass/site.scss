@@ -1,0 +1,265 @@
+$font-family-sans: "ProximaNova", sans-serif;
+$font-family-mono: "Menlo", "Bitstream Vera Sans Mono", monospace;
+$color-link: rgba(68, 187, 255, 1); // vimeo ::selection with alpha=1
+$color-text: #4D4D4D;
+$color-light: #ccc;
+$color-lightest: #eee;
+$color-dot: #70d725;
+$ease-in-sine: cubic-bezier(0.47, 0, 0.745, 0.715);
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 17px;
+  border-top: 2px solid rgb(22, 139, 174);
+}
+
+body {
+  font-family: $font-family-sans;
+  color: $color-text;
+  line-height: 1.725;
+  background-color: #fff;
+  margin: 0;
+}
+
+emph {
+  font-style: italic;
+}
+
+@keyframes zoom {
+    50% { transform: scale(1.5); }
+}
+
+.dot {
+    font-size: 9px;
+    vertical-align: middle;
+    padding: 0 0.5rem;
+    display: inline-block;
+    transition: 0.25s $ease-in-sine;
+
+    &:before {
+        content: "";
+        display: inline-block;
+        width: .8em;
+        height: .8em;
+        border-radius: 50%;
+        background: $color-dot;
+
+        animation-name: zoom;
+        animation-duration: 1.5s;
+        animation-timing-function: $ease-in-sine;
+    }
+
+    &:hover {
+        transform: scale(1.5);
+    }
+}
+
+.image-wrap {
+    display: flex;
+    flex-direction: column;
+
+    .image-block {
+        display: block;
+        background-position: center;
+        @include no-select;
+        align-self: center;
+
+        img {
+            max-width: 100%;
+        }
+    }
+}
+
+@media (min-width: 540px) {
+    .image-wrap {
+        flex-direction: row;
+        margin-bottom: 2rem;
+
+        .image-block {
+            margin-right: 2rem;
+        }
+    }
+}
+
+tt {
+    font-family: "Inconsolata", monospace;
+}
+
+p,
+dl,
+ol,
+ul {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  @include hyphens(auto);
+}
+
+a {
+  text-decoration: none;
+  color: $color-text;
+  @include underline(5px, $color-light);
+
+  &:hover {
+    background-image: linear-gradient(transparent, transparent 4px, $color-link 4px, $color-link);
+  }
+}
+
+.underline-link {
+    @include underline(4px, $color-link);
+}
+
+h1 a,
+.h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+  color: inherit;
+  text-decoration: none;
+  background: none;
+}
+
+h1 a:hover,
+.h1 a:hover,
+h2 a:hover,
+h3 a:hover,
+h4 a:hover,
+h5 a:hover,
+h6 a:hover {
+  @include underline(6px, $color-link);
+}
+
+h1, .h1 {
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  @include antialias;
+}
+
+.title {
+    text-transform: none;
+    font-size: 1.5em;
+    line-height: 1.25;
+}
+
+h2, .h2 {
+  font-size: 1rem;
+  font-weight: normal;
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: normal;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+h3,
+h4,
+h5,
+h6 {
+  font-size: 1rem;
+}
+
+h3,
+h4,
+h5 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+br, hr {
+    @include no-select;
+}
+
+abbr,
+.sc {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+table {
+  width: 100%;
+  max-width: 100%;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+th,
+td {
+  padding: 0;
+  line-height: 2rem;
+}
+
+th {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  text-align: left;
+  border-bottom: 2px solid;
+}
+
+td {
+  border-bottom: 1px solid rgba(0, 0, 0, .0625);
+}
+
+tr:last-child td {
+  border: 0;
+}
+
+.link-block {
+  display: inline-block;
+  text-decoration: none;
+  background-image: none;
+
+  &:hover {
+    background-image: none;
+  }
+}
+
+.width {
+  max-width: 39rem;
+}
+
+@media (max-width: 480px) {
+  body.px3 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  body.my4 {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  body header {
+    h1:nth-of-type(1) {
+      margin-top: 2rem;
+    }
+
+    .twitter {
+      display: none;
+    }
+  }
+}
+
+@import "code";
+@import "fork";
+@import "syntax";
+@import "pages";
