@@ -1,5 +1,6 @@
 $font-family-sans: "ProximaNova", sans-serif;
 $font-family-mono: "Menlo", "Bitstream Vera Sans Mono", monospace;
+$font-family-tt: "Inconsolata", monospace;
 $color-link: rgba(68, 187, 255, 1); // vimeo ::selection with alpha=1
 $color-text: #4D4D4D;
 $color-light: #ccc;
@@ -7,9 +8,7 @@ $color-lightest: #eee;
 $color-dot: #70d725;
 $ease-in-sine: cubic-bezier(0.47, 0, 0.745, 0.715);
 
-*,
-*:before,
-*:after {
+*, *:before, *:after {
   box-sizing: border-box;
 }
 
@@ -30,69 +29,8 @@ emph {
   font-style: italic;
 }
 
-@keyframes zoom {
-    50% { transform: scale(1.5); }
-}
-
-.dot {
-    font-size: 9px;
-    vertical-align: middle;
-    padding: 0 0.5rem;
-    display: inline-block;
-    transition: 0.25s $ease-in-sine;
-
-    &:before {
-        content: "";
-        display: inline-block;
-        width: .8em;
-        height: .8em;
-        border-radius: 50%;
-        background: $color-dot;
-
-        animation-name: zoom;
-        animation-duration: 1.5s;
-        animation-timing-function: $ease-in-sine;
-    }
-
-    &:hover {
-        transform: scale(1.5);
-    }
-}
-
-.image-wrap {
-    display: flex;
-    flex-direction: column;
-
-    .image-block {
-        display: block;
-        background-position: center;
-        @include no-select;
-        align-self: center;
-
-        img {
-            width: 100%;
-        }
-    }
-}
-
-@media (min-width: 540px) {
-    .image-wrap {
-        flex-direction: row;
-        margin-bottom: 2rem;
-
-        .image-block {
-            margin-right: 2rem;
-            flex: 1 0 35%;
-        }
-
-        p {
-            flex: 1 0 65%;
-        }
-    }
-}
-
 tt {
-    font-family: "Inconsolata", monospace;
+    font-family: $font-family-tt;
 }
 
 p,
@@ -188,6 +126,62 @@ br, hr {
     @include no-select;
 }
 
+.image-wrap {
+    display: flex;
+    flex-direction: column;
+
+    .image-block {
+        display: block;
+        background-position: center;
+        @include no-select;
+        align-self: center;
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
+@media (min-width: 540px) {
+    .image-wrap {
+        flex-direction: row;
+        margin-bottom: 2rem;
+
+        .image-block {
+            margin-right: 2rem;
+            flex: 1 0 35%;
+        }
+
+        p {
+            flex: 1 0 65%;
+        }
+    }
+}
+
+.width {
+  max-width: 39rem;
+}
+
+@media (max-width: 480px) {
+  // smaller margins at smaller screen widths
+  body.px3 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  body.my4 {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  // reduce margin for first heading
+  body header {
+    h1:nth-of-type(1) {
+      margin-top: 2rem;
+    }
+  }
+}
+
 abbr,
 .sc {
   text-transform: uppercase;
@@ -228,43 +222,77 @@ tr:last-child td {
   border: 0;
 }
 
-.link-block {
-  display: inline-block;
-  text-decoration: none;
-  background-image: none;
+/* Code */
+code,
+pre {
+  font-family: $font-family-mono;
+}
 
-  &:hover {
-    background-image: none;
+code {
+  padding: .25em .5em;
+  font-size: 80%;
+  color: #311;
+  background-color: #f7f7f7;
+  border-radius: 2px;
+}
+
+pre {
+  display: block;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  font-size: 1rem;
+  line-height: 1.4;
+  background-color: #f7f7f7;
+
+
+  white-space: pre;
+  white-space: pre-wrap;
+  word-break: break-all;
+  word-wrap: break-word;
+}
+
+pre code {
+  padding: 0;
+  font-size: 85%;
+  color: inherit;
+  background-color: transparent;
+}
+
+.highlight {
+  margin-bottom: 2rem;
+  border-radius: 1px;
+}
+
+.highlight pre {
+  margin-bottom: 0;
+}
+
+/* Quotes */
+blockquote {
+  padding: 1rem 1rem;
+  margin: 1rem 0;
+  color: #7a7a7a;
+  border-left: .25rem solid #e5e5e5;
+
+  p {
+    margin-top: 0;
   }
 }
 
-.width {
-  max-width: 39rem;
+blockquote p:last-child {
+  margin-bottom: 0;
 }
 
-@media (max-width: 480px) {
-  body.px3 {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-
-  body.my4 {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-  }
-
-  body header {
-    h1:nth-of-type(1) {
-      margin-top: 2rem;
-    }
-
-    .twitter {
-      display: none;
-    }
+@media (min-width: 30em) {
+  blockquote {
+    padding-right: 5rem;
+    padding-left: 1.25rem;
   }
 }
 
-@import "code";
-@import "fork";
+pre {
+  tab-size: 4;
+}
+
 @import "syntax";
-@import "pages";
