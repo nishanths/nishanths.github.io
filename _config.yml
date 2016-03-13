@@ -1,5 +1,5 @@
 # Site not entirely customized using config
-# Some meta tags in _includes/head.html need manual edits
+# Some meta tags in _includes/head.html and other file contents need manual edits
 title: Nishanth Shanmugham
 email: nishanths@utexas.edu
 description: > # this means to ignore newlines until "baseurl:"
@@ -11,26 +11,20 @@ github_username: nishanths
 google_analytics: UA-61427501-2 # get yours at https://analytics.google.com/analytics/web/
 
 html_lang: en
-
 permalink: /writing/:title/
 paginate: 8
 paginate_path: "writing/page:num/"
-
+excerpt_separator: <!--more-->  # you can specify your own separator, of course.
 exclude: [".ruby-version", "Gemfile", "Gemfile.lock", "wercker.yml"]
 
 # Build settings
 markdown: kramdown
-
 kramdown:
   input: GFM
-
 highlighter: rouge
-
 sass:
   sass_dir: _sass
   style: compressed
 
 gems:
     - jekyll-paginate
-
-excerpt_separator: <!--more-->  # you can specify your own separator, of course.
