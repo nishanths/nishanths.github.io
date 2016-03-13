@@ -4,8 +4,8 @@ The responsive theme that powers [`https://nishanths.github.io`](https://nishant
 
 Branches:
 
-- [`source`](https://github.com/nishanths/nishanths.github.io/tree/source) (Jekyll source)
-- [`master`](https://github.com/nishanths/nishanths.github.io/tree/master) (generated static files for GitHub Pages)
+- [`source`](https://github.com/nishanths/nishanths.github.io/tree/source): Jekyll source
+- [`master`](https://github.com/nishanths/nishanths.github.io/tree/master): generated static files for GitHub Pages
 
 <img src="http://cl.ly/0U142h3i003v/Screen%20Shot%202016-03-13%20at%2012.51.27%20PM.png" width=1200>
 
@@ -30,11 +30,18 @@ $ bundle
 # edit `_config.yml` and other files as needed...
 
 # serve locally
-$ jekyll s
+$ bundle exec jekyll s
 ```
 
 The site should be live at `http://localhost:4000`. Jekyll watches and regenerates files on change.
 
+
+## Usage
+
+```bash
+# create a new post
+$ bundle exec jekyll post "Your new post title"
+```
 
 ## Effects
 
@@ -43,7 +50,7 @@ The site should be live at `http://localhost:4000`. Jekyll watches and regenerat
 
 A green dot that links to the home page pulses when the page is loaded or hovered over.
 
-![](http://cl.ly/3x2g3y3A0K37/pulse.gif)
+![](http://cl.ly/363x0X1u320j/pulse.gif)
 
 ## Build and deploy
 
@@ -56,13 +63,13 @@ $ jekyll build
 
 **Automated deploy**
 
-The `wercker.yml` files contains a job that builds and force-pushes the generated `_site` to the `master` branch on GitHub. 
+The `wercker.yml` files contains a job that builds and force pushes the generated `_site` files to the `master` branch on GitHub.
 
 Usually, I keep the source on a separate branch named `source`, and let wercker handle pushing to `master`.
 
 
 ## License
 
-The web fonts are subject to their original licenses. You are welcome to use the other content under the MIT License (where applicable). 
+The web fonts are subject to their original licenses. You are welcome to use the other content under the MIT License (where applicable).
 
 [MIT](http://nishanths.mit-license.org). Copyright © 2016 [Nishanth Shanmugham](https://github.com/nishanths).
