@@ -12,9 +12,6 @@ google_analytics: UA-61427501-2 # get yours at https://analytics.google.com/anal
 
 html_lang: en
 permalink: /writing/:title/
-paginate: 8
-paginate_path: "writing/page:num/"
-excerpt_separator: <!--more-->  # you can specify your own separator, of course.
 exclude: [".ruby-version", "Gemfile", "Gemfile.lock", "wercker.yml"]
 
 # Build settings
@@ -25,6 +22,3 @@ highlighter: rouge
 sass:
   sass_dir: _sass
   style: compressed
-
-gems:
-    - jekyll-paginate
