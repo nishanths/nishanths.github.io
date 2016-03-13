@@ -1,36 +1,44 @@
 # nishanths.github.io [![wercker status](https://app.wercker.com/status/fba89a110952058b1ed018f98722af1e/s/source "wercker status")](https://app.wercker.com/project/bykey/fba89a110952058b1ed018f98722af1e)
 
-The responsive theme that powers [`https://nishanths.github.io`](https://nishanths.github.io).
+The responsive Jekyll theme that powers [this website](https://nishanths.github.io).
 
-Branches:
+**Features**
+
+- Syntax highlighting
+- Responsive with flexbox
+- [Subtlte animations](#effects)
+- Built-in 404 page
+- [Automatic deploys](#build-and-deploy)
+
+<img src="http://cl.ly/0U142h3i003v/Screen%20Shot%202016-03-13%20at%2012.51.27%20PM.png" width=1200>
+
+**Branches**
 
 - [`source`](https://github.com/nishanths/nishanths.github.io/tree/source): Jekyll source
 - [`master`](https://github.com/nishanths/nishanths.github.io/tree/master): generated static files for GitHub Pages
 
-<img src="http://cl.ly/0U142h3i003v/Screen%20Shot%202016-03-13%20at%2012.51.27%20PM.png" width=1200>
-
 ## Contents
 
 * [Setup](#setup)
+* [Usage](#usage)
 * [Effects](#effects)
 * [Build and deploy](#build-and-deploy)
 * [License](#license)
 
 ## Setup
 
-
 ```bash
 # clone the repo into a directory named `website`
-$ git clone <repo-url> website
+$ git clone https://github.com/nishanths/nishanths.github.io.git website
 $ cd website
 
-# install dependencies
+# install gems
 $ bundle
 
-# edit `_config.yml` and other files as needed...
+# Edit `_config.yml` and other files as needed ...
 
 # serve locally
-$ bundle exec jekyll s
+$ bundle exec jekyll serve
 ```
 
 The site should be live at `http://localhost:4000`. Jekyll watches and regenerates files on change.
@@ -38,17 +46,19 @@ The site should be live at `http://localhost:4000`. Jekyll watches and regenerat
 
 ## Usage
 
+To create a new post, run:
+
 ```bash
-# create a new post
 $ bundle exec jekyll post "Your new post title"
+# New post created at _posts/2016-03-13-your-new-post-title.md.
 ```
 
 ## Effects
 
 
-> **Pulse animation**
+**Pulse animation**
 
-A green dot that links to the home page pulses when the page is loaded or hovered over.
+A green dot that links to the home page pulses when the page is loaded and hovered over.
 
 ![](http://cl.ly/363x0X1u320j/pulse.gif)
 
@@ -63,13 +73,11 @@ $ jekyll build
 
 **Automated deploy**
 
-The `wercker.yml` files contains a job that builds and force pushes the generated `_site` files to the `master` branch on GitHub.
-
-Usually, I keep the source on a separate branch named `source`, and let wercker handle pushing to `master`.
+The `wercker.yml` files contains a job that builds and force pushes the static files to the `master` branch on GitHub. I usually keep the source on a separate `source` branch and let wercker take care of pushing to `master`.
 
 
 ## License
 
-The web fonts are subject to their original licenses. You are welcome to use the other content under the MIT License (where applicable).
+The web fonts are subject to their original licenses. You are welcome to use the other content under the MIT License.
 
 [MIT](http://nishanths.mit-license.org). Copyright © 2016 [Nishanth Shanmugham](https://github.com/nishanths).
