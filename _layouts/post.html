@@ -10,6 +10,9 @@ layout: default
     </h1>
     <h1 class="title" itemprop="name headline"><a href="">{{ page.title }}</a></h1>
     <div class="meta">
+        <span class="h1" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <a href="/"><span itemprop="name">{% if page.author %}{{ page.author }}{% else %}{{ site.title }}{% endif %}</span></a>
+        </span>
         <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished" title="It was a beautiful day!">
             {{ page.date | date: "%-d %b %Y" }}
         </time>
