@@ -16,7 +16,7 @@ Responsive Jekyll theme.
 - Google Analytics
 - [Automatic deploys](#build-and-deploy)
 
-<img src="http://cl.ly/0U142h3i003v/Screen%20Shot%202016-03-13%20at%2012.51.27%20PM.png" width=1200>
+<img src="http://cl.ly/091S0l0V1d0X/Screen%20Shot%202016-03-14%20at%2012.20.43%20AM.png" width=1000>
 
 ## Setup
 
