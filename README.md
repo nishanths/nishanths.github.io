@@ -1,13 +1,13 @@
 # nishanths.github.io
 
-A super awesome responsive Jekyll theme
+Super awesome responsive Jekyll theme
 
 [![wercker status](https://app.wercker.com/status/fba89a110952058b1ed018f98722af1e/s/source "wercker status")](https://app.wercker.com/project/bykey/fba89a110952058b1ed018f98722af1e)
 
 **Branches**
 
-- [`source`](https://github.com/nishanths/nishanths.github.io/tree/source): Jekyll source
-- [`master`](https://github.com/nishanths/nishanths.github.io/tree/master): generated static files for GitHub Pages
+- `source`: Jekyll source
+- `master`: generated static files for GitHub Pages
 
 ## Features
 
@@ -25,7 +25,7 @@ A super awesome responsive Jekyll theme
 
 To view the website locally:
 
-```bash
+```
 # clone the repo into a directory named website
 $ git clone https://github.com/nishanths/nishanths.github.io.git website
 $ cd website
@@ -49,7 +49,7 @@ The site should be live at `http://localhost:4000`. Jekyll watches and regenerat
 
 To create a new post, run:
 
-```bash
+```
 $ bundle exec jekyll post "Your new post title"
 # New post created at _posts/2016-03-13-your-new-post-title.md.
 ```
@@ -64,7 +64,7 @@ $ bundle exec jekyll build
 
 **Automatic deploy**
 
-The `wercker.yml` file contains a job that builds and force pushes the static files to the `master` branch on GitHub. I usually keep the source on a separate `source` branch and let wercker take care of pushing to `master`.
+You can push code to a separate `source` branch that Wercker uses for building. Wercker will build and force push the updated static files to the `master` branch on GitHub.
 
 
 ## License

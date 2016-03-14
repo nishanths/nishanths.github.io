@@ -3,7 +3,7 @@ layout: default
 ---
 
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-  <header class="header">
+  <header>
     <h1 class="top-subtitle">
         <a href="/writing/">Writing</a>
         <a href="/"><div class="dot"></div></a>
@@ -17,10 +17,6 @@ layout: default
             {{ page.date | date: "%-d %b %Y" }}
         </time>
     </div>
-    {% comment %}
-    <!-- TODO: -->
-    <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>
-    {% endcomment %}
   </header>
 
   <div class="content" itemprop="articleBody">
