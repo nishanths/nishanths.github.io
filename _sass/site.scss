@@ -47,6 +47,10 @@ p {
   @include hyphens(auto);
 }
 
+pre, code {
+    @include hyphens(manual);
+}
+
 a {
   text-decoration: none;
   color: $color-text;
