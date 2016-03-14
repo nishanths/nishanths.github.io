@@ -1,6 +1,8 @@
-# nishanths.github.io [![wercker status](https://app.wercker.com/status/fba89a110952058b1ed018f98722af1e/s/source "wercker status")](https://app.wercker.com/project/bykey/fba89a110952058b1ed018f98722af1e)
+# nishanths.github.io
 
-Responsive Jekyll theme.
+A super awesome responsive Jekyll theme
+
+[![wercker status](https://app.wercker.com/status/fba89a110952058b1ed018f98722af1e/s/source "wercker status")](https://app.wercker.com/project/bykey/fba89a110952058b1ed018f98722af1e)
 
 **Branches**
 
@@ -11,10 +13,11 @@ Responsive Jekyll theme.
 
 - Syntax highlighting
 - Responsive (with flexbox)
-- [Subtle animations](#effects)
 - Built-in 404 page
 - Google Analytics
 - [Automatic deploys](#build-and-deploy)
+- [Subtle animations](https://github.com/nishanths/nishanths.github.io/blob/source/_sass/dot.scss)
+
 
 <img src="http://cl.ly/091S0l0V1d0X/Screen%20Shot%202016-03-14%20at%2012.20.43%20AM.png" width=1000>
 
@@ -26,6 +29,9 @@ To view the website locally:
 # clone the repo into a directory named website
 $ git clone https://github.com/nishanths/nishanths.github.io.git website
 $ cd website
+
+# make sure we are on the correct branch
+$ git checkout source
 
 # install gems
 $ bundle
@@ -48,17 +54,7 @@ $ bundle exec jekyll post "Your new post title"
 # New post created at _posts/2016-03-13-your-new-post-title.md.
 ```
 
-## Effects
-
-
-**Pulse animation**
-
-A green dot that links to the home page pulses when the page is loaded and hovered over.
-
-![](http://cl.ly/363x0X1u320j/pulse.gif)
-
 ## Build and deploy
-
 
 To generate static files in the `_site` directory, run:
 
