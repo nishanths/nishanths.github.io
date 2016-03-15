@@ -1,6 +1,8 @@
 # nishanths.github.io
 
-Super awesome responsive Jekyll theme
+Super awesome responsive Jekyll theme.
+
+Used for my [website](https://nishanths.github.io).
 
 [![wercker status](https://app.wercker.com/status/fba89a110952058b1ed018f98722af1e/s/source "wercker status")](https://app.wercker.com/project/bykey/fba89a110952058b1ed018f98722af1e)
 
