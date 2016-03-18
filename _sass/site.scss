@@ -25,6 +25,7 @@ body {
   background-color: #fff;
   margin: 0;
   text-rendering: geometricPrecision;
+  @include antialias;
 }
 
 emph {
@@ -228,7 +229,7 @@ tr:last-child td {
   border: 0;
 }
 
-/* Code */
+// Code
 code,
 pre {
   font-family: $font-family-mono;
@@ -251,11 +252,12 @@ pre {
   line-height: 1.4;
   background-color: #f7f7f7;
 
-
   white-space: pre;
   white-space: pre-wrap;
   word-break: break-all;
   word-wrap: break-word;
+
+  tab-size: 4;
 }
 
 pre code {
@@ -274,7 +276,7 @@ pre code {
   margin-bottom: 0;
 }
 
-/* Quotes */
+// Quotes
 blockquote {
   padding: 1rem 1rem;
   margin: 1rem 0;
@@ -295,10 +297,6 @@ blockquote p:last-child {
     padding-right: 5rem;
     padding-left: 1.25rem;
   }
-}
-
-pre {
-  tab-size: 4;
 }
 
 @import "syntax";
