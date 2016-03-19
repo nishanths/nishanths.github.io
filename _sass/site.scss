@@ -1,19 +1,23 @@
 $font-family-sans: "ProximaNova", "Lato", sans-serif;
 $font-family-mono: "Menlo", "Bitstream Vera Sans Mono", monospace;
 $font-family-tt: "Inconsolata", monospace;
-$color-link: rgba(68, 187, 255, 1); // vimeo ::selection with alpha=1
-$color-text: #4D4D4D;
+$color-link: rgba(68, 187, 255, 1);
+
+// vimeo: :selection with alpha=1
+$color-text: #2d2d2d;
 $color-light: #ccc;
 $color-lightest: #eee;
 $color-dot: #70d725;
 $ease-in-sine: cubic-bezier(0.47, 0, 0.745, 0.715);
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: border-box;
 }
 
 html {
-  font-size: 17px;
+  font-size: 16px;
   border-top: 2px solid rgb(22, 139, 174);
 }
 
@@ -25,6 +29,7 @@ body {
   background-color: #fff;
   margin: 0;
   text-rendering: geometricPrecision;
+
   @include antialias;
 }
 
@@ -33,7 +38,7 @@ emph {
 }
 
 tt {
-    font-family: $font-family-tt;
+  font-family: $font-family-tt;
 }
 
 p,
@@ -48,13 +53,15 @@ p {
   @include hyphens(auto);
 }
 
-pre, code {
-    @include hyphens(manual);
+pre,
+code {
+  @include hyphens(manual);
 }
 
 a {
   text-decoration: none;
   color: $color-text;
+
   @include underline(5px, $color-light);
 
   &:hover {
@@ -63,7 +70,7 @@ a {
 }
 
 .underline-link {
-    @include underline(4px, $color-link);
+  @include underline(4px, $color-link);
 }
 
 h1 a,
@@ -88,7 +95,8 @@ h6 a:hover {
   @include underline(6px, $color-link);
 }
 
-h1, .h1 {
+h1,
+.h1 {
   text-transform: uppercase;
   letter-spacing: 0.01em;
   font-size: 1rem;
@@ -96,16 +104,18 @@ h1, .h1 {
   font-weight: 700;
   margin-top: 3rem;
   margin-bottom: 2rem;
+
   @include antialias;
 }
 
 .title {
-    text-transform: none;
-    font-size: 1.5em;
-    line-height: 1.25;
+  text-transform: none;
+  font-size: 1.5em;
+  line-height: 1.25;
 }
 
-h2, .h2 {
+h2,
+.h2 {
   font-size: 1rem;
   font-weight: normal;
   font-weight: 400;
@@ -129,40 +139,43 @@ h5 {
   margin-bottom: 1rem;
 }
 
-br, hr {
-    @include no-select;
+br,
+hr {
+  @include no-select;
 }
 
 .image-wrap {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 
-    .image-block {
-        display: block;
-        background-position: center;
-        @include no-select;
-        align-self: center;
+  .image-block {
+    display: block;
+    background-position: center;
 
-        img {
-            width: 100%;
-        }
+    @include no-select;
+
+    align-self: center;
+
+    img {
+      width: 100%;
     }
+  }
 }
 
 @media (min-width: 540px) {
-    .image-wrap {
-        flex-direction: row;
-        margin-bottom: 2rem;
+  .image-wrap {
+    flex-direction: row;
+    margin-bottom: 2rem;
 
-        .image-block {
-            margin-right: 2rem;
-            flex: 1 0 35%;
-        }
-
-        p {
-            flex: 1 0 65%;
-        }
+    .image-block {
+      margin-right: 2rem;
+      flex: 1 0 35%;
     }
+
+    p {
+      flex: 1 0 65%;
+    }
+  }
 }
 
 .width {
@@ -222,7 +235,7 @@ th {
 }
 
 td {
-  border-bottom: 1px solid rgba(0, 0, 0, .0625);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.0625);
 }
 
 tr:last-child td {
@@ -251,12 +264,10 @@ pre {
   font-size: 1rem;
   line-height: 1.4;
   background-color: #f7f7f7;
-
   white-space: pre;
   white-space: pre-wrap;
   word-break: break-all;
   word-wrap: break-word;
-
   tab-size: 4;
 }
 
