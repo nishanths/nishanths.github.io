@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- HTTPS redirect for github pages -->
+    <script type="text/javascript">
+        var host = 'nishanths.github.io';
+        if ((host === window.location.host) && (window.location.protocol === 'http:')) {
+            window.location.protocol = 'https'; // without ':' for firefox compatibility
+        }
+    </script>
+    <!-- styles -->
+    <link rel="stylesheet" href=" /css/main.css ">
+    <link href='https://fonts.googleapis.com/css?family=Inconsolata:400,700|Lato:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="Nishanth Shanmugham: web developer" property="og:title">
+    <meta content="Nishanth Shanmugham: web developer" property="twitter:title">
+    <meta content="website" property="og:type">
+    <meta content="Nishanth Shanmugham" property="og:site_name">
+    <meta property="fb:admins" content="1103227056" />
+    <!-- title and desc -->
+    <title>Parallel tests in Go | Nishanth Shanmugham</title>
+    <meta name="description" content="Golang surprises me everyday with how beautiful it is. Today, it was parallel testing:">
+
+    <link rel="canonical" href="https://nishanths.github.io/writing/parallel-tests-in-go/">
+    <link rel="alternate" type="application/rss+xml" title="Nishanth Shanmugham" href="https://nishanths.github.io/feed.xml">
+</head>
+
+<body class="width mx-auto px3 my4">
+    <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    <h1 class="top-subtitle">
+        <a href="/writing/">Writing</a>
+        <a href="/"><div class="dot"></div></a>
+    </h1>
+    <h1 class="title" itemprop="name headline"><a href="">Parallel tests in Go</a></h1>
+    <div class="meta">
+        <span class="h1" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <a href="/"><span itemprop="name">Nishanth Shanmugham</span></a>
+        </span>
+        <time datetime="2016-01-18T07:43:39+00:00" itemprop="datePublished" title="It was a beautiful day!">
+            18 Jan 2016
+        </time>
+    </div>
+  </header>
+
+  <div class="content" itemprop="articleBody">
+    <p>Golang surprises me everyday with how beautiful it is. Today, it was <a href="https://golang.org/src/testing/testing.go?s=14868:14890#L410">parallel testing</a>:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="k">import</span><span class="x"> </span><span class="s">"testing"</span><span class="x">
+
+</span><span class="k">func</span><span class="x"> </span><span class="n">TestMeow</span><span class="p">(</span><span class="n">t</span><span class="x"> </span><span class="o">*</span><span class="n">testing</span><span class="o">.</span><span class="n">T</span><span class="p">)</span><span class="x"> </span><span class="p">{</span><span class="x">
+    </span><span class="n">t</span><span class="o">.</span><span class="n">Parallel</span><span class="p">()</span><span class="x">
+    </span><span class="c">// test logic here</span><span class="x">
+</span><span class="p">}</span><span class="x">
+
+</span><span class="k">func</span><span class="x"> </span><span class="n">TestRoar</span><span class="p">(</span><span class="n">t</span><span class="x"> </span><span class="o">*</span><span class="n">testing</span><span class="o">.</span><span class="n">T</span><span class="p">)</span><span class="x"> </span><span class="p">{</span><span class="x">
+    </span><span class="n">t</span><span class="o">.</span><span class="n">Parallel</span><span class="p">()</span><span class="x">
+    </span><span class="c">// test logic here</span><span class="x">
+</span><span class="p">}</span><span class="x">
+</span></code></pre>
+</div>
+
+<p>Tests marked with <code class="highlighter-rouge">t.Parallel()</code> will execute in parallel with other tests also marked with <code class="highlighter-rouge">t.Parallel()</code>. So the tests <code class="highlighter-rouge">TestMeow()</code> and <code class="highlighter-rouge">TestRoar()</code> will run in parallel.</p>
+
+<!--more-->
+
+<p>In case you want to run the tests serially for some reason, you can simply set the <code class="highlighter-rouge">test.parallel</code> flag from the command-line, instead of commenting out each <code class="highlighter-rouge">t.Parallel()</code> call.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ go test -test.parallel 1
+</code></pre>
+</div>
+
+  </div>
+</article>
+
+    <script>
+    (function() {
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        var GOOGLE_ANALYTICS_TRACKING_ID = "UA-61427501-2";
+
+        ga('create', GOOGLE_ANALYTICS_TRACKING_ID, 'auto');
+        ga('send', 'pageview');
+    })();
+</script>
+
+</body>
+</html>
