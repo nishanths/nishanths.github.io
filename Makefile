@@ -24,4 +24,6 @@ deps:
 
 .PHONY: publish
 publish:
+	# it seems like out/ should have been committed at least once for this
+	# to work
 	git subtree push --prefix out/ origin master
