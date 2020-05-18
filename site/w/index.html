@@ -13,17 +13,22 @@ title: Writing
     </h1>
 </header>
 <section class="posts">
+    {% if !site.posts.empty %}
     <ul>
     {% for post in site.posts %}
         <li>
             <div>
                 <a href="{{ post.url }}">{{ post.title }}</a>
                 {% comment %}
-                <!-- TODO: date or tag -->
                 <span class="date">{{post.date | date: "%Y-%m-%d"}}</span>
                 {% endcomment %}
             </div>
         </li>
     {% endfor %}
     </ul>
+    {% else %}
+    <div>
+        <emph><p>This section is empty.</p></emph>
+    </div>
+    {% endif %}
 </section>

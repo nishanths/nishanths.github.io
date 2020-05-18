@@ -6,11 +6,14 @@ layout: default
 <section class="index">
     <div>
         <p>
-            <a class="underline-link" href="https://github.com/{{site.github_username}}">@{{site.github_username}}</a>
-            <a href="mailto:{{site.email}}">{{site.email}}</a>
+            Hello, I enjoy making software.
+        </p>
+        <p>
+            I'm on <a href="https://github.com/{{site.github_username}}">GitHub</a>. Contact me by email at <a href="mailto:{{site.email}}">nishanths@utexas.edu</a>.
         </p>
     </div>
     <h1 id="writing"><a href="/w/">Writing</a></h1>
+    {% if !site.posts.empty %}
     <ul>
     {% for post in site.posts %}
         <li>
@@ -23,4 +26,9 @@ layout: default
         </li>
     {% endfor %}
     </ul>
+    {% else %}
+    <div>
+        <emph><p>This section is empty.</p></emph>
+    </div>
+    {% endif %}
 </section>
