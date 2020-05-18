@@ -29,8 +29,6 @@ body {
   background-color: #fff;
   margin: 0;
   text-rendering: geometricPrecision;
-
-  @include antialias;
 }
 
 emph {
