@@ -32,3 +32,10 @@ publish:
 	# it seems like out/ should have been committed at least once for this
 	# to work
 	git subtree push --prefix out/ origin master
+
+.PHONY: commit
+commit:
+	git commit -am .
+
+.PHONY: all
+all: b commit publish
