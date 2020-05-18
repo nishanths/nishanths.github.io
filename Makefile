@@ -1,6 +1,11 @@
 JEKYLL := bundle exec jekyll
 SRCDEST := --source site --destination out
 
+# make changes to styles/content.
+# then 'make' to build changes.
+# then commit your changes.
+# then 'make publish' to push to GitHub Pages.
+
 .PHONY: default
 default: b
 
