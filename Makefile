@@ -1,5 +1,5 @@
 JEKYLL := bundle exec jekyll
-SRCDEST := --source site --destination site/_site
+SRCDEST := --source site --destination out
 
 .PHONY: default
 default: b
@@ -21,3 +21,7 @@ draft:
 .PHONY: deps
 deps:
 	bundle install --path vendor/bundle
+
+.PHONY: publish
+publish:
+	git subtree push --prefix out/ origin master
