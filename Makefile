@@ -10,7 +10,7 @@ b:
 
 .PHONY: s
 s:
-	$(JEKYLL) s $(SRCDEST)
+	$(JEKYLL) serve $(SRCDEST)
 
 .PHONY: post
 post:
