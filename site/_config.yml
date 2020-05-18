@@ -5,6 +5,7 @@ email: nishanths@utexas.edu
 baseurl: ""
 url: "https://nishanths.github.io"
 github_username: nishanths
+comments: false
 
 html_lang: en
 permalink: /w/:title/

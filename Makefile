@@ -12,10 +12,11 @@ b:
 s:
 	$(JEKYLL) serve $(SRCDEST)
 
-.PHONY: post
-post:
-	# usage: make post t="My Title"
-	$(JEKYLL) post $(t) --source site
+.PHONY: draft
+draft:
+	# usage: make draft t="My Title"
+	# then move the file to site/_posts/ when done
+	$(JEKYLL) draft $(t) --source site
 
 .PHONY: deps
 deps:
