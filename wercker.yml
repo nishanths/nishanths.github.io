@@ -13,7 +13,7 @@ build:
     # that actually builds the jekyll site
     - script:
         name: generate site
-        code: bundle exec jekyll build --trace
+        code: cd site && bundle exec jekyll build --trace
 
 deploy:
     steps:
@@ -21,6 +21,6 @@ deploy:
             packages: git ssh-client
         - leipert/git-push:
             gh_oauth: $GIT_TOKEN
-            basedir: _site
-            branch: master
+            basedir: site/_site
+            branch: gh-pages
             discard_history: true
