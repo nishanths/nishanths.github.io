@@ -11,7 +11,11 @@ title: Writing
     </h1>
 </header>
 <section class="posts">
-    {% if !site.posts.empty %}
+    {% if site.posts.empty? %}
+    <div>
+        <emph><p>This section is empty.</p></emph>
+    </div>
+    {% else %}
     <ul>
     {% for post in site.posts %}
         <li>
@@ -24,9 +28,5 @@ title: Writing
         </li>
     {% endfor %}
     </ul>
-    {% else %}
-    <div>
-        <emph><p>This section is empty.</p></emph>
-    </div>
     {% endif %}
 </section>
