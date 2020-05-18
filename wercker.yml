@@ -22,5 +22,5 @@ deploy:
         - leipert/git-push:
             gh_oauth: $GIT_TOKEN
             basedir: site/_site
-            branch: gh-pages
+            branch: master
             discard_history: false
