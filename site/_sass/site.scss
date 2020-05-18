@@ -144,40 +144,6 @@ hr {
   @include no-select;
 }
 
-.image-wrap {
-  display: flex;
-  flex-direction: column;
-
-  .image-block {
-    display: block;
-    background-position: center;
-
-    @include no-select;
-
-    align-self: center;
-
-    img {
-      width: 100%;
-    }
-  }
-}
-
-@media (min-width: 540px) {
-  .image-wrap {
-    flex-direction: row;
-    margin-bottom: 2rem;
-
-    .image-block {
-      margin-right: 2rem;
-      flex: 1 0 35%;
-    }
-
-    p {
-      flex: 1 0 65%;
-    }
-  }
-}
-
 .width {
   max-width: 39rem;
 }

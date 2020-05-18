@@ -23,4 +23,4 @@ deploy:
             gh_oauth: $GIT_TOKEN
             basedir: site/_site
             branch: gh-pages
-            discard_history: true
+            discard_history: false
