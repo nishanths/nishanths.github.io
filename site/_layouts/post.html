@@ -11,9 +11,16 @@ layout: default
     </h1>
     <h1 class="title" itemprop="name headline"><a href="">{{ page.title }}</a></h1>
     <div class="meta">
+      {% if page.last_modified_at %}
+        <span>Last update: </span>
         <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished" title="It was a beautiful day!">
             {{ page.date | date: "%-d %b %Y" }}
         </time>
+      {% else %}
+        <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished" title="It was a beautiful day!">
+            {{ page.date | date: "%-d %b %Y" }}
+        </time>
+      {% endif %}
     </div>
   </header>
 
