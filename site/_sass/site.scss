@@ -47,9 +47,9 @@ ul {
   margin-bottom: 1rem;
 }
 
-p {
-  @include hyphens(auto);
-}
+// p {
+//   @include hyphens(auto);
+// }
 
 pre,
 code,
