@@ -11,7 +11,7 @@ title: Writing
     </h1>
 </header>
 <section class="posts">
-    {% if site.posts.empty? %}
+    {% if (site.posts | size) == 0 %}
     <div>
         <emph><p>This section is empty.</p></emph>
     </div>
