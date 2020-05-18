@@ -13,9 +13,10 @@ layout: default
         </p>
         <p>See music I have been listening to: <a class="underline-link" href="https://scrobble.littleroot.org/u/nishanth">scrobble.littleroot.org/u/nishanth</a>.</p>
     </div>
-    {% if (site.posts | size) != 0 %}
+    {% assign n = site.posts | size %}
+    {% if n != 0 %}
     <h1 id="writing"><a href="/w/">Writing</a></h1>
-    {% if (site.posts | size) == 0 %}
+    {% if n == 0 %}
     <div>
         <emph><p>This section is empty.</p></emph>
     </div>
