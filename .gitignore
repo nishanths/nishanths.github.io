@@ -1,8 +1,7 @@
 site/_site/
 site/.sass-cache/
-
+.sass-cache/
 .jekyll-metadata
 .DS_Store
 .ruby-version
-
 vendor/
