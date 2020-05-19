@@ -6,7 +6,7 @@ layout: default
   <header>
     <a href="/"><emph>Back to home</emph></a>
     <h1 class="top-subtitle">
-        <a href="/w/">Writing</a>
+        <a href="/p/">Writing</a>
         <a href="/"><div class="dot"></div></a>
     </h1>
     <h1 class="title" itemprop="name headline"><a href="">{{ page.title }}</a></h1>
@@ -27,22 +27,4 @@ layout: default
   <div class="content" itemprop="articleBody">
     {{ content }}
   </div>
-
-  {% if site.comments %}
-    <div id="disqus_thread"></div>
-    <script type="text/javascript">
-      // https://disqus.com/admin/universalcode/#configuration-variables
-      var disqus_config = function () {
-        this.page.url = "{{ site.url | append: page.url }}"; // your page's canonical URL variable
-        this.page.identifier = "{{ page.slug }}"; // your page's unique identifier variable
-      };
-      (function() { // DON'T EDIT BELOW THIS LINE
-      var d = document, s = d.createElement('script');
-      s.src = 'https://nishanths.disqus.com/embed.js';
-      s.setAttribute('data-timestamp', +new Date());
-      (d.head || d.body).appendChild(s);
-      })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments.</a></noscript>
-  {% endif %}
 </article>
