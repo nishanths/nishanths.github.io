@@ -1,0 +1,32 @@
+---
+layout: default
+title: Posts
+---
+
+<header>
+    <a href="/"><emph>Back to home</emph></a>
+    <h1>
+        <a href="">Posts</a>
+        <a href="/"><div class="dot"></div></a>
+    </h1>
+</header>
+<section class="posts">
+    {% if (site.posts | size) == 0 %}
+    <div>
+        <emph><p>This section is empty.</p></emph>
+    </div>
+    {% else %}
+    <ul>
+    {% for post in site.posts %}
+        <li>
+            <div>
+                <a href="{{ post.url }}">{{ post.title }}</a>
+                {% comment %}
+                <span class="date">{{post.date | date: "%Y-%m-%d"}}</span>
+                {% endcomment %}
+            </div>
+        </li>
+    {% endfor %}
+    </ul>
+    {% endif %}
+</section>
