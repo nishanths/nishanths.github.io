@@ -2,15 +2,9 @@ html {
 	font-family: equity, serif;
 }
 
-html,
-body {
-	height: 100%;
-	width: 100%;
-}
-
 body {
 	margin: 0 auto;
-	max-width: 340px;
+	max-width: 330px;
 	padding: 15px;
 }
 
@@ -24,6 +18,11 @@ img {
 }
 
 @media screen and (min-width: 650px) {
+	html,
+	body {
+		height: 90%;
+	}
+
 	body {
 		max-width: 600px;
 		padding: 15px 0;
