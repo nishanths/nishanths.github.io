@@ -26,10 +26,14 @@ img {
 @media screen and (min-width: 650px) {
 	body {
 		max-width: 600px;
+		padding: 15px 0;
 	}
 }
 
 @media screen and (min-width: 650px) and (min-height: 550px) {
+	body {
+		padding: 0;
+	}
 	.center {
 		align-items: center;
 		display: flex;
