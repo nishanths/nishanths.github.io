@@ -1,0 +1,23 @@
+@font-face {
+    font-family: equity;
+    src: url("equity/Equity Text B Regular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: equity;
+    font-style: italic;
+    src: url("equity/Equity Text B Italic.otf") format("opentype");
+}
+
+@font-face {
+    font-family: equity;
+    font-weight: bold;
+    src: url("equity/Equity Text B Bold.otf") format("opentype");
+}
+
+@font-face {
+    font-family: equity;
+    font-weight: bold;
+    font-style: italic;
+    src: url("equity/Equity Text B Bold Italic.otf") format("opentype");
+}

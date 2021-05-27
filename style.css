@@ -1,0 +1,39 @@
+html {
+	font-family: equity, serif;
+}
+
+html,
+body {
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	margin: 0 auto;
+	max-width: 340px;
+	padding: 15px;
+}
+
+.center {
+	display: block;
+}
+
+img {
+	max-width: 100%;
+	border-radius: 2px;
+}
+
+@media screen and (min-width: 650px) {
+	body {
+		max-width: 600px;
+	}
+}
+
+@media screen and (min-width: 650px) and (min-height: 550px) {
+	.center {
+		align-items: center;
+		display: flex;
+		height: 100%;
+		width: 100%;
+	}
+}
