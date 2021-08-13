@@ -2,14 +2,15 @@
 
 Super awesome responsive Jekyll theme.
 
-Used for my [website](https://nishanths.github.io).
+Used for my old website.
+
+See the `main` branch for the current website.
 
 [![wercker status](https://app.wercker.com/status/fba89a110952058b1ed018f98722af1e/s/source "wercker status")](https://app.wercker.com/project/bykey/fba89a110952058b1ed018f98722af1e)
 
 **Branches**
 
 - `source`: Jekyll source
-- `master`: generated static files for GitHub Pages
 
 ## Features
 
