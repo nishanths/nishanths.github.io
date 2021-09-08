@@ -4,6 +4,9 @@
 
 html {
 	font-family: equity, serif;
+	/* prevent resizing in landscape in iOS Safari */
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
 }
 
 body {
