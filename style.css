@@ -35,10 +35,6 @@ p {
 
 a {
 	color: var(--primary-color);
-	text-decoration: none;
-}
-
-a:hover {
 	text-decoration: underline;
 }
 
