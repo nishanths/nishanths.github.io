@@ -1,5 +1,5 @@
 :root {
-	--link-color: #106079;
+	--primary-color: #000;
 }
 
 html {
@@ -10,6 +10,7 @@ body {
 	margin: 0 auto;
 	max-width: 330px;
 	padding: 15px;
+	color: var(--primary-color);
 }
 
 .center {
@@ -21,8 +22,16 @@ img {
 	border-radius: 2px;
 }
 
+.main-img {
+	width: 360px;
+}
+
+p {
+	font-size: 1.075rem;
+}
+
 a {
-	color: var(--link-color);
+	color: var(--primary-color);
 	text-decoration: none;
 }
 
@@ -46,9 +55,10 @@ a:hover {
 	body {
 		padding: 0;
 	}
+
 	.center {
-		align-items: center;
 		display: flex;
+		align-items: center;
 		height: 100%;
 		width: 100%;
 	}
