@@ -16,10 +16,6 @@ body {
 	color: var(--primary-color);
 }
 
-.center {
-	display: block;
-}
-
 img {
 	max-width: 100%;
 	border-radius: 2px;
