@@ -1,10 +1,12 @@
 :root {
-	--primary-color: #000;
+	--primary-color: #2d2d2d;
+	--dot-color: #1882a3;
 }
 
 html {
-	font-family: equity, serif;
-	/* prevent resizing in landscape in iOS Safari */
+	font-size:  16px;
+	background-color: #fff;
+	font-family: "proxima nova", sans-serif;
 	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust: 100%;
 }
@@ -14,11 +16,14 @@ body {
 	max-width: 330px;
 	padding: 15px;
 	color: var(--primary-color);
+	background-color: #fff;
+	text-rendering: geometricPrecision;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
 }
 
 img {
 	max-width: 100%;
-	border-radius: 2px;
 }
 
 .main-img {
@@ -26,12 +31,38 @@ img {
 }
 
 p {
-	font-size: 1.075rem;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
 }
 
-a {
-	color: var(--primary-color);
-	text-decoration: underline;
+h1,
+.h1 {
+	text-transform: uppercase;
+	letter-spacing: 0.01em;
+	font-size: 1rem;
+	font-style: normal;
+	font-weight: 700;
+	margin-bottom: 1rem;
+}
+
+.heading {
+	display: flex;
+	align-items: center;
+}
+
+.dot {
+	font-size: 10px;
+	padding: 0 0.75rem;
+	margin:  -4px 0 0 0;
+}
+
+.dot:before {
+	content: "";
+	display: inline-block;
+	width: .8em;
+	height: .8em;
+	border-radius: 50%;
+	background: var(--dot-color);
 }
 
 @media screen and (min-width: 650px) {
