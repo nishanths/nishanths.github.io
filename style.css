@@ -4,7 +4,7 @@
 }
 
 html {
-	font-size:  16px;
+	font-size: 16px;
 	background-color: #fff;
 	font-family: "proxima nova", sans-serif;
 	-webkit-text-size-adjust: 100%;
@@ -53,7 +53,7 @@ h1,
 .dot {
 	font-size: 10px;
 	padding: 0 0.75rem;
-	margin:  -4px 0 0 0;
+	margin: -4px 0 0 0;
 }
 
 .dot:before {
