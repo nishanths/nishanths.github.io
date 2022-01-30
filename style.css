@@ -1,6 +1,7 @@
 :root {
 	--primary-color: #2d2d2d;
 	--dot-color: #44BBFF;
+	--light-color: #ccc;
 }
 
 html {
@@ -63,6 +64,19 @@ h1,
 	height: .8em;
 	border-radius: 50%;
 	background: var(--dot-color);
+}
+
+a {
+	text-decoration: none;
+	color: var(--primary-color);
+	background-repeat: no-repeat;
+	background-position: bottom;
+	background-size: 100% 6px;
+	background-image: linear-gradient(transparent, transparent 5px, var(--light-color) 5px, var(--light-color));
+}
+
+a:hover {
+	background-image: linear-gradient(transparent, transparent 4px, var(--dot-color) 4px, var(--dot-color));
 }
 
 @media screen and (min-width: 650px) {
