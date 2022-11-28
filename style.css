@@ -1,7 +1,9 @@
 :root {
-	--primary-color: #2d2d2d;
-	--dot-color: #44BBFF;
-	--light-color: #ccc;
+	--color-primary: #2d2d2d;
+	--color-link: #44BBFF; /* rgba(68, 187, 255, 1) */
+	--color-dot: #70d725;
+	--color-light: #ccc;
+	--color-lightest: #eee;
 }
 
 html {
@@ -17,7 +19,7 @@ body {
 	max-width: 512px;
 	line-height: 1.35;
 	padding: 15px;
-	color: var(--primary-color);
+	color: var(--color-primary);
 	background-color: #fff;
 	text-rendering: optimizeLegibility;
 	-moz-osx-font-smoothing: grayscale;
@@ -76,24 +78,24 @@ h1,
 	width: .8em;
 	height: .8em;
 	border-radius: 50%;
-	background: var(--dot-color);
+	background: var(--color-dot);
 }
 
 a {
 	text-decoration: none;
-	color: var(--primary-color);
+	color: var(--color-primary);
 	background-repeat: no-repeat;
 	background-position: bottom;
 	background-size: 100% 6px;
-	background-image: linear-gradient(transparent, transparent 4px, var(--dot-color) 4px, var(--dot-color));
+	background-image: linear-gradient(transparent, transparent 4px, var(--color-link) 4px, var(--color-link));
 }
 
 a.no-underline {
-	background-image: linear-gradient(transparent, transparent 4px, var(--light-color) 4px, var(--light-color));
+	background-image: linear-gradient(transparent, transparent 4px, var(--color-light) 4px, var(--color-light));
 }
 
 a:hover {
-	background-image: linear-gradient(transparent, transparent 4px, var(--dot-color) 4px, var(--dot-color));
+	background-image: linear-gradient(transparent, transparent 4px, var(--color-link) 4px, var(--color-link));
 }
 
 @media screen and (min-width: 650px) {
