@@ -33,7 +33,9 @@
 */
 
 /* @import must be at top of file, otherwise CSS will not work */
-/* NOTE: This has been added to head.html instead */
+
+/* NOTE: This responds with HTTP status 503. If re-adding, add
+ it to the <head> of the page, not here. */
 /* @import url("//hello.myfonts.net/count/3f5ed2"); */
 
 @font-face {
