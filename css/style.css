@@ -96,15 +96,15 @@ a {
 	background-repeat: no-repeat;
 	background-position: bottom;
 	background-size: 100% 6px;
-	background-image: linear-gradient(transparent, transparent 4px, var(--color-link) 4px, var(--color-link));
-}
-
-a.no-underline {
 	background-image: linear-gradient(transparent, transparent 4px, var(--color-light) 4px, var(--color-light));
 }
 
+a.underline {
+	background-image: linear-gradient(transparent, transparent 3px, var(--color-link) 3px, var(--color-link));
+}
+
 a:hover {
-	background-image: linear-gradient(transparent, transparent 4px, var(--color-link) 4px, var(--color-link));
+	background-image: linear-gradient(transparent, transparent 3px, var(--color-link) 3px, var(--color-link));
 }
 
 @media screen and (min-width: 650px) {
