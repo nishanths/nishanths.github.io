@@ -1,6 +1,7 @@
 :root {
 	--color-primary: #2d2d2d;
 	--color-link: #44BBFF; /* rgba(68, 187, 255, 1) */
+	--color-meta: #7a7a7a;
 	--color-dot: var(--color-link);
 	--color-light: #ccc;
 	--color-lightest: #eee;
@@ -44,6 +45,10 @@ img {
 
 .scl {
 	font-variant-caps: all-small-caps;
+}
+
+.meta {
+	color: var(--color-meta);
 }
 
 p {
