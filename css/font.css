@@ -40,12 +40,12 @@
 	font-family: "proxima nova";
 	font-weight: normal;
 	font-style: normal;
-	src: url('proxima-nova/regular.woff2') format('woff2'), url('proxima-nova/regular.woff') format('woff');
+	src: url('/font/proxima-nova/regular.woff2') format('woff2'), url('/font/proxima-nova/regular.woff') format('woff');
 }
 
 @font-face {
 	font-family: "proxima nova";
 	font-weight: bold;
 	font-style: normal;
-	src: url('proxima-nova/bold.woff2') format('woff2'), url('proxima-nova/bold.woff') format('woff');
+	src: url('/font/proxima-nova/bold.woff2') format('woff2'), url('/font/proxima-nova/bold.woff') format('woff');
 }
