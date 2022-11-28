@@ -14,14 +14,18 @@ html {
 
 body {
 	margin: 0 auto;
-	max-width: 330px;
+	max-width: 512px;
 	line-height: 1.35;
 	padding: 15px;
 	color: var(--primary-color);
 	background-color: #fff;
-	text-rendering: geometricPrecision;
+	text-rendering: optimizeLegibility;
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
+	font-variant-ligatures: common-ligatures discretionary-ligatures contextual;
+	font-variant-numeric: proportional-nums;
+	font-kerning: normal;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 img {
@@ -30,6 +34,14 @@ img {
 
 .main-img {
 	height: 240px;
+}
+
+.sc {
+	font-variant-caps: small-caps;
+}
+
+.scl {
+	font-variant-caps: all-small-caps;
 }
 
 p {
@@ -74,6 +86,10 @@ a {
 	background-position: bottom;
 	background-size: 100% 6px;
 	background-image: linear-gradient(transparent, transparent 4px, var(--dot-color) 4px, var(--dot-color));
+}
+
+a.no-underline {
+	background-image: linear-gradient(transparent, transparent 4px, var(--light-color) 4px, var(--light-color));
 }
 
 a:hover {
