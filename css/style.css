@@ -38,7 +38,7 @@ img {
 }
 
 .main-img {
-	height: 240px;
+	max-height: 240px;
 	margin-bottom: .5rem;
 }
 
@@ -67,6 +67,7 @@ h1,
 	font-style: normal;
 	font-weight: 700;
 	margin-bottom: 1rem;
+	line-height: 1.35;
 }
 
 .heading {
