@@ -2,8 +2,8 @@
 	--color-primary: #2d2d2d;
 	--color-link: #44BBFF; /* rgba(68, 187, 255, 1) */
 	--color-meta: #7a7a7a;
-/*	--color-dot: #70d725;*/
-	--color-dot: var(--color-link);
+	--color-dot: #70d725;
+/*	--color-dot: var(--color-link);*/
 /*	--color-dot: #50B805;*/
 	--color-light: #ccc;
 	--color-lightest: #eee;
@@ -107,10 +107,10 @@ a:hover {
 	background-image: linear-gradient(transparent, transparent 3px, var(--color-link) 3px, var(--color-link));
 }
 
-@media screen and (min-width: 650px) {
+@media screen and (min-width: 720px) {
 	html,
 	body {
-		height: 100%;
+		min-height: 100vh;
 	}
 
 	body {
@@ -120,7 +120,7 @@ a:hover {
 	}
 }
 
-@media screen and (min-width: 650px) and (min-height: 650px) {
+@media screen and (min-width: 720px) and (min-height: 720px) {
 	body {
 		padding: 0;
 	}
@@ -128,7 +128,8 @@ a:hover {
 	.center {
 		display: flex;
 		align-items: center;
-		height: 100%;
-		width: 100%;
+		min-height: 90vh;
 	}
 }
+
+
