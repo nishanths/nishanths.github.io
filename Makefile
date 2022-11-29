@@ -4,8 +4,3 @@ serve:
 
 .PHONY: s
 s: serve
-
-.PHONY: dev
-dev:
-	subl .
-	make serve
