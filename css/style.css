@@ -5,7 +5,7 @@
 /*	--color-dot: #70d725;*/
 	--color-dot: var(--color-link);
 /*	--color-dot: #50B805;*/
-	--color-light: #ccc;
+	--color-light: #ddd;
 	--color-lightest: #eee;
 }
 
@@ -93,6 +93,7 @@ h1,
 a {
 	text-decoration: none;
 	color: var(--color-primary);
+	padding-bottom: 1px;
 	background-repeat: no-repeat;
 	background-position: bottom;
 	background-size: 100% 6px;
@@ -128,4 +129,8 @@ a:hover {
 	}
 }
 
-
+@media screen and (min-width: 720px) and (min-height: 900px) {
+	body {
+		padding: 0;
+	}
+}
