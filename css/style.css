@@ -93,7 +93,7 @@ h1,
 a {
 	text-decoration: none;
 	color: var(--color-primary);
-	padding-bottom: 1px;
+	padding-bottom: 2px;
 	background-repeat: no-repeat;
 	background-position: bottom;
 	background-size: 100% 6px;
