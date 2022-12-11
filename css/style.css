@@ -2,9 +2,7 @@
 	--color-primary: #2d2d2d;
 	--color-link: #44BBFF; /* rgba(68, 187, 255, 1) */
 	--color-meta: #7a7a7a;
-/*	--color-dot: #70d725;*/
 	--color-dot: var(--color-link);
-/*	--color-dot: #50B805;*/
 	--color-light: #ddd;
 	--color-lightest: #eee;
 }
