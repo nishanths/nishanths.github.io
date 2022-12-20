@@ -62,7 +62,7 @@ h1,
 	font-size: 1rem;
 	font-style: normal;
 	font-weight: 700;
-	margin-top: 0.67rem;
+	margin-top: 1rem;
 	margin-bottom: 1rem;
 	line-height: 1.35;
 }
@@ -82,7 +82,7 @@ h1,
 .dot {
 	font-size: 10px;
 	padding: 0 0.75rem;
-	margin: -4px 0 0 0;
+	margin: 2px 0 0 0;
 }
 
 .dot:before {
