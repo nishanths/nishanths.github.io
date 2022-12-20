@@ -15,6 +15,10 @@ html {
 	-ms-text-size-adjust: 100%;
 }
 
+* {
+	box-sizing: border-box;
+}
+
 body {
 	margin: 0 auto;
 	max-width: 512px;
@@ -119,7 +123,7 @@ a:hover {
 	}
 
 	body {
-		max-width: 600px;
+		max-width: 528px;
 		line-height: 1.5;
 		padding: 30px 0;
 	}
